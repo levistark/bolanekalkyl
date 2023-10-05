@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolånekalkyl</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor-container">
+        <div class="cursor">
+        </div>
+    </div>
+    
+    <div class="snow-wrapper">
+        <i class="fa-duotone fa-snowflake randomSnowflake" style="--fa-primary-color: #d6d6d6; --fa-secondary-color: #d6d6d6;"></i>
+        <i class="fa-duotone fa-snowflake randomSnowflake2" style="--fa-primary-color: #d6d6d6; --fa-secondary-color: #d6d6d6;"></i>
+        <i class="fa-duotone fa-snowflake randomSnowflake3" style="--fa-primary-color: #d6d6d6; --fa-secondary-color: #d6d6d6;"></i>
+        <i class="fa-duotone fa-snowflake randomSnowflake4" style="--fa-primary-color: #d6d6d6; --fa-secondary-color: #d6d6d6;"></i>
+        <i class="fa-duotone fa-snowflake randomSnowflake5" style="--fa-primary-color: #d6d6d6; --fa-secondary-color: #d6d6d6;"></i>
+
+        <i class="fa-duotone fa-snowflake randomSnowflake8" style="--fa-primary-color: #d6d6d6; --fa-secondary-color: #d6d6d6;"></i>
+        <i class="fa-duotone fa-snowflake randomSnowflake9" style="--fa-primary-color: #d6d6d6; --fa-secondary-color: #d6d6d6;"></i>
+        <i class="fa-duotone fa-snowflake randomSnowflake10" style="--fa-primary-color: #d6d6d6; --fa-secondary-color: #d6d6d6;"></i>
+        <i class="fa-duotone fa-snowflake randomSnowflake11" style="--fa-primary-color: #d6d6d6; --fa-secondary-color: #d6d6d6;"></i>
+        <i class="fa-duotone fa-snowflake randomSnowflake12" style="--fa-primary-color: #d6d6d6; --fa-secondary-color: #d6d6d6;"></i>
+    </div>
+
+    <main class="main">
+        <div class="bg-container">
+            <img src="/test3.jpg" class="bg-image">
+        </div>
+        <i class="fa-duotone fa-house houseIcon"></i>
+
+        <h1>Bolånekalkyl</h1>
+
+        <div class="main-content">
+            <div class="form-container">
+                <h2>Din framtida bostad</h2>
+                <form class="house-form" action="" method="post">
+                    <label for="inp-housePrice">Tänkt bostadspris</label>
+                    <input type="number" id="inp-housePrice" placeholder="Ex. 2000000">
+                    <label for="inp-deposit">Kontantinsats</label>
+                    <input type="number" id="inp-deposit">
+                    <label for="inp-interest">Exempelränta i %</label>
+                    <input type="number" id="inp-interest" placeholder="Ex. 4.5">
+                    <label for="inp-amortization">Ammorteringsgrad i % per år</label>
+                    <input type="number" id="inp-amortization" placeholder="Ex. 2">
+                </form>
+            </div>
+            <div class="form-container">
+                <h2>Hushåll & ekonomi</h2>
+                <form class="budget-form" action="" method="post">
+                    <label for="inp-income">Månadsinkomst innan skatt</label>
+                    <input type="number" id="inp-income">
+                    <label for="inp-opCosts">Driftskostnader</label>
+                    <input type="number" id="inp-opCosts">
+                    <label for="inp-otherCosts">Övriga kostnader</label>
+                    <input type="number" id="inp-otherCosts">
+                </form>
+            </div>
+            <div class="result-container">
+                <button class="btn-result">Resultat</button>
+                <ul class="result-list">
+                    <label for="li-totalCost">Total preliminär månadskostnad</label>
+                    <li id="li-totalCost">
+                        
+                    </li>
+                    <label for="li-moneyLeft">Pengar kvar i plånboken varje månad</label>
+                    <li id="li-moneyLeft">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container footer"></footer>
+    <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
+
+

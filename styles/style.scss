@@ -1,0 +1,285 @@
+
+:root {
+    --animation-time: 0.5s; 
+    --starting-position: 50vw;
+    --starting-delay: 0.5s;
+  }
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #04040e;
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    
+
+    .snow-wrapper {
+        display: flex;
+        position: relative;
+
+        .snowFlake {
+            font-size: 5pt;
+            animation: snowFall linear infinite;
+            animation-duration: 1s;
+            transition: 0.3;
+        }
+        .randomSnowflake, .randomSnowflake2, .randomSnowflake3, .randomSnowflake4, .randomSnowflake5, .randomSnowflake6.randomSnowflake7, .randomSnowflake8, .randomSnowflake9, .randomSnowflake10, .randomSnowflake11, .randomSnowflake12 {
+            opacity: 0;
+            font-size: 5pt;
+            left: 4vw;
+            position: absolute;
+            animation: randomSnowFall 2s linear infinite forwards;
+            animation-delay: 0.3s;
+            transition: 0.3;
+            z-index: 0;
+        }
+        .randomSnowflake2 {
+            animation: randomSnowFall 1.3s linear infinite forwards;
+            animation-delay: 0.6s;
+            left: 15vw;
+        }
+        .randomSnowflake3 {
+            animation: randomSnowFall 2s linear infinite forwards;
+            animation-delay: 0.9s;
+            left: 25vw;
+        }
+        .randomSnowflake4 {
+            animation: randomSnowFall 1.5s linear infinite forwards;
+            animation-delay: 0.5s;
+            left: 36vw;
+        }
+        .randomSnowflake5 {
+            animation: randomSnowFall 2.2s linear infinite forwards;
+            animation-delay: 0.1s;
+            left: 45vw;
+        }
+        .randomSnowflake8 {
+            animation: randomSnowFall 2s linear infinite forwards;
+            animation-delay: 0.5s;
+            left: 56vw;
+        }
+        .randomSnowflake9 {
+            animation: randomSnowFall 1.6s linear infinite forwards;
+            animation-delay: 0.1s;
+            left: 67vw;
+        }
+        .randomSnowflake10 {
+            animation: randomSnowFall 2.1s linear infinite forwards;
+            animation-delay: 0.8s;
+            left: 70vw;
+        }
+        .randomSnowflake11 {
+            animation: randomSnowFall 1.8s linear infinite forwards;
+            animation-delay: 0.3s;
+            left: 80vw;
+        }
+        .randomSnowflake12 {
+            animation: randomSnowFall 2.6s linear infinite forwards;
+            animation-delay: 0.9s;
+            left: 91vw;
+        }
+
+    }
+}
+
+input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #a1a1a1;
+    color: #d1d1d1;
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+ }
+
+ /* Fallback for other browsers */
+ input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+ }
+
+@keyframes snowFall {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    25% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(300px)
+    }
+  }
+
+@keyframes randomSnowFall {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+      }
+      25% {
+          opacity: 0.6;
+      }
+      50% {
+          opacity: 0.1;
+      }
+      75% {
+          opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(70vh)
+      }
+    }
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #d1d1d1;
+    width: 100vw;
+    height: 100vh;
+
+    .bg-image {
+        position: absolute;
+        background-image: url(/test3.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        filter: blur(15px) brightness(50%); 
+        z-index: -1;
+    }
+    .bg-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .bg-image {
+            width: 100%;
+            height: auto;
+            filter: blur(15px) brightness(50%);
+            transition: filter 0.3s ease-out;
+        }
+        /* Add hover styles to reveal the unblurred part of the image */
+            &:hover .bg-image {
+            filter: blur(0px) brightness(100%);
+        }
+    }
+    
+
+    .houseIcon {
+        margin-top: 2rem;
+        font-size: 60pt;
+    }
+
+    h1 {
+        margin: 3rem 0 3rem;
+        font-weight: 500;
+    }
+
+    .main-content {
+        z-index: 1;
+        display: grid;
+        grid-template-areas: 
+                            "a b"                     
+                            "c c";
+                            
+
+        box-shadow: rgba(17, 152, 129, 0.375) 0px 0px 15px 10px;
+        background-color: rgba(3, 3, 3, 0.761);
+        border-radius: 10px;
+
+        .form-container {
+            padding: 3rem 4rem;
+            
+    
+            h2 {
+                margin: 2rem 0;
+            }
+            .house-form {
+                font-size: 13pt;
+                grid-area: a;
+                label {
+                    display: block;
+                    margin: 0.8rem 0;
+                }
+                input {
+                    display: block;
+                    margin: 0.8rem 0;
+                    width: 100%;
+                }
+            }
+            .budget-form {
+                font-size: 13pt;
+                grid-area: b;
+                label {
+                    display: block;
+                    margin: 0.8rem 0;
+                }
+                input {
+                    display: block;
+                    width: 100%;
+                    margin: 0.8rem 0;
+                }
+            }
+        }
+        .result-container {
+            grid-area: c;
+            padding: 1rem 3rem 3rem;
+            display: flex;
+            flex-direction: column;
+
+            .btn-result {
+                align-self: center;
+                padding: 1rem;
+                border-radius: 25px;
+                width: 25vw;
+                background-color: #d8d8d8;
+                border: 0;
+                box-shadow: rgb(17, 152, 129, 0.375) 0px 0px 15px 8px;
+                font-size: 14pt;
+                font-weight: 500;
+                transition: 0.2s;
+
+                &:hover {
+                    background-color: #1ad1bf;
+                }
+            }
+
+            .result-list {
+                margin-top: 3rem;
+                border-top: solid #a1a1a1 1px;
+                padding-top: 3rem;
+
+                display: flex;
+                flex-direction: column;
+                list-style-type: none;
+                
+                label {
+                    font-size: 16pt;
+                    margin: 1rem 0;
+                }
+
+                li {
+                    font-size: 15pt;   
+                    color: #1ad1bf; 
+                    font-style: italic;
+                }
+            
+            }
+        }
+
+    }
+}
