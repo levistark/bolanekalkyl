@@ -151,28 +151,25 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 100vw;
     height: 100vh;
 
-    .bg-image {
-        position: absolute;
-        background-image: url(/test3.jpg);
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        filter: blur(15px) brightness(50%); 
-        z-index: -1;
-    }
     .bg-container {
-        position: absolute;
         width: 100%;
         height: 100%;
         overflow: hidden;
 
         .bg-image {
+            position: absolute;
+            background-size: cover;
+
             width: 100%;
             height: auto;
+
             filter: blur(15px) brightness(50%);
             transition: filter 0.3s ease-out;
+
+            z-index: 0;
+
         }
-        /* Add hover styles to reveal the unblurred part of the image */
+            /* Add hover styles to reveal the unblurred part of the image */
             &:hover .bg-image {
             filter: blur(0px) brightness(100%);
         }
