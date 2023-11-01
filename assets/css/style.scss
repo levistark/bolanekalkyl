@@ -9,15 +9,12 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #04040e;
-    background-size: cover;
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    
 
     .snow-wrapper {
         display: flex;
         position: relative;
+        z-index: 1;
 
         .snowFlake {
             font-size: 5pt;
@@ -33,7 +30,6 @@ body {
             animation: randomSnowFall 2s linear infinite forwards;
             animation-delay: 0.3s;
             transition: 0.3;
-            z-index: 0;
         }
         .randomSnowflake2 {
             animation: randomSnowFall 1.3s linear infinite forwards;
@@ -148,25 +144,23 @@ input[type="number"]::-webkit-inner-spin-button {
     align-items: center;
     flex-direction: column;
     color: #d1d1d1;
-    width: 100vw;
+    position: relative;
     height: 100vh;
+    padding-bottom: 6rem;
 
     .bg-container {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+
+        position: absolute;
 
         .bg-image {
-            position: absolute;
             background-size: cover;
-
-            width: 100%;
-            height: auto;
-
+            width: 100vw;
+            max-height: 100vh;
+            
             filter: blur(15px) brightness(50%);
             transition: filter 0.3s ease-out;
 
-            z-index: 0;
+            z-index: -2;
 
         }
             /* Add hover styles to reveal the unblurred part of the image */
@@ -174,16 +168,20 @@ input[type="number"]::-webkit-inner-spin-button {
             filter: blur(0px) brightness(100%);
         }
     }
-    
 
     .houseIcon {
-        margin-top: 2rem;
+        margin-top: 3rem;
         font-size: 60pt;
+        @media (max-width: 768px ){
+            font-size: 48pt;
+
+        }
     }
 
     h1 {
         margin: 3rem 0 3rem;
         font-weight: 500;
+        z-index: 1;
     }
 
     .main-content {
@@ -192,15 +190,19 @@ input[type="number"]::-webkit-inner-spin-button {
         grid-template-areas: 
                             "a b"                     
                             "c c";
-                            
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
         box-shadow: rgba(17, 152, 129, 0.375) 0px 0px 15px 10px;
         background-color: rgba(3, 3, 3, 0.761);
         border-radius: 10px;
 
         .form-container {
-            padding: 3rem 4rem;
-            
+            padding: 7% 12%;
     
             h2 {
                 margin: 2rem 0;
@@ -242,7 +244,7 @@ input[type="number"]::-webkit-inner-spin-button {
                 align-self: center;
                 padding: 1rem;
                 border-radius: 25px;
-                width: 25vw;
+                width: 50%;
                 background-color: #d8d8d8;
                 border: 0;
                 box-shadow: rgb(17, 152, 129, 0.375) 0px 0px 15px 8px;
