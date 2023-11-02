@@ -82,11 +82,10 @@ body .bg-container {
   height: auto;
   z-index: 1;
   overflow: hidden;
-  /* Add hover styles to reveal the unblurred part of the image */
 }
 @media (min-width: 1400px) {
   body .bg-container {
-    max-height: 100vh;
+    max-height: 130vh;
   }
 }
 @media (max-width: 970px) {
@@ -179,12 +178,12 @@ input[type=number] {
 }
 .main .houseIcon {
   margin-top: 3rem;
-  font-size: 60pt;
+  font-size: 45pt;
   z-index: 1;
 }
 @media (max-width: 768px) {
   .main .houseIcon {
-    font-size: 48pt;
+    font-size: 40pt;
   }
 }
 .main h1 {
@@ -199,6 +198,7 @@ input[type=number] {
   box-shadow: rgba(17, 152, 129, 0.375) 0px 0px 15px 10px;
   background-color: rgba(3, 3, 3, 0.761);
   border-radius: 10px;
+  max-width: 1000px;
 }
 @media (max-width: 768px) {
   .main .main-content {
@@ -207,7 +207,7 @@ input[type=number] {
     justify-content: center;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 1000px) {
   .main .main-content {
     border-radius: 0;
   }

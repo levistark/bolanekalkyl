@@ -87,7 +87,7 @@ body {
         height: auto;
 
         @media (min-width: 1400px) {
-            max-height: 100vh;
+            max-height: 130vh;
         }
         z-index: 1;
         overflow: hidden;
@@ -95,7 +95,6 @@ body {
         @media (max-width: 970px) {
             height: 100%;
         }
-
         .bg-image {
             background-size: cover;
             width: 100%;
@@ -107,13 +106,9 @@ body {
                 width: auto;
             }
         }
-            /* Add hover styles to reveal the unblurred part of the image */
             &:hover .bg-image {
             filter: blur(0px) brightness(100%);
         }
-
-        
-        
     }
 }
 
@@ -189,10 +184,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
     .houseIcon {
         margin-top: 3rem;
-        font-size: 60pt;
+        font-size: 45pt;
         z-index: 1;
         @media (max-width: 768px ){
-            font-size: 48pt;
+            font-size: 40pt;
         }
     }
 
@@ -218,8 +213,9 @@ input[type="number"]::-webkit-inner-spin-button {
         box-shadow: rgba(17, 152, 129, 0.375) 0px 0px 15px 10px;
         background-color: rgba(3, 3, 3, 0.761);
         border-radius: 10px;
+        max-width: 1000px;
 
-        @media (max-width: 575px) {
+        @media (max-width: 1000px) {
             border-radius: 0;
         }
         
