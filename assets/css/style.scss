@@ -11,6 +11,7 @@ body {
     background-color: #04040e;
     position: relative;
     width: 100vw !important;
+    padding-bottom: 2rem;
 
     .snow-wrapper {
         display: flex;
@@ -185,7 +186,6 @@ input[type="number"]::-webkit-inner-spin-button {
     flex-direction: column;
     position: relative;
     color: #d1d1d1;
-    padding-bottom: 6rem;
 
     .houseIcon {
         margin-top: 3rem;
@@ -218,6 +218,10 @@ input[type="number"]::-webkit-inner-spin-button {
         box-shadow: rgba(17, 152, 129, 0.375) 0px 0px 15px 10px;
         background-color: rgba(3, 3, 3, 0.761);
         border-radius: 10px;
+
+        @media (max-width: 575px) {
+            border-radius: 0;
+        }
         
         .form-container {
             padding: 7% 12%;

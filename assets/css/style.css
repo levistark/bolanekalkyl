@@ -9,6 +9,7 @@ body {
   background-color: #04040e;
   position: relative;
   width: 100vw !important;
+  padding-bottom: 2rem;
 }
 body .snow-wrapper {
   display: flex;
@@ -175,7 +176,6 @@ input[type=number] {
   flex-direction: column;
   position: relative;
   color: #d1d1d1;
-  padding-bottom: 6rem;
 }
 .main .houseIcon {
   margin-top: 3rem;
@@ -205,6 +205,11 @@ input[type=number] {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+@media (max-width: 575px) {
+  .main .main-content {
+    border-radius: 0;
   }
 }
 .main .main-content .form-container {
