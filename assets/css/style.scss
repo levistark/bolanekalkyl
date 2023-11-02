@@ -10,11 +10,12 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #04040e;
     position: relative;
+    width: 100vw !important;
 
     .snow-wrapper {
         display: flex;
         position: relative;
-        z-index: 1;
+        z-index: 2;
 
         .snowFlake {
             font-size: 5pt;
@@ -78,6 +79,41 @@ body {
         }
 
     }
+
+    .bg-container {
+        position: absolute;
+        width: 100% !important;
+        height: auto;
+
+        @media (min-width: 1400px) {
+            max-height: 100vh;
+        }
+        z-index: 1;
+        overflow: hidden;
+
+        @media (max-width: 970px) {
+            height: 100%;
+        }
+
+        .bg-image {
+            background-size: cover;
+            width: 100%;
+
+            filter: blur(15px) brightness(50%);
+            transition: filter 0.3s ease-out;
+
+            @media (max-width: 970px) {
+                width: auto;
+            }
+        }
+            /* Add hover styles to reveal the unblurred part of the image */
+            &:hover .bg-image {
+            filter: blur(0px) brightness(100%);
+        }
+
+        
+        
+    }
 }
 
 input {
@@ -86,6 +122,10 @@ input {
     border-bottom: 1px solid #a1a1a1;
     color: #d1d1d1;
     outline: none;
+}
+
+.warning {
+    border-bottom: 1px solid #e1ba0e;
 }
 
 input[type="number"]::-webkit-inner-spin-button {
@@ -143,38 +183,16 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: #d1d1d1;
     position: relative;
-    height: 100vh;
+    color: #d1d1d1;
     padding-bottom: 6rem;
-
-    .bg-container {
-
-        position: absolute;
-
-        .bg-image {
-            background-size: cover;
-            width: 100vw;
-            max-height: 100vh;
-            
-            filter: blur(15px) brightness(50%);
-            transition: filter 0.3s ease-out;
-
-            z-index: -2;
-
-        }
-            /* Add hover styles to reveal the unblurred part of the image */
-            &:hover .bg-image {
-            filter: blur(0px) brightness(100%);
-        }
-    }
 
     .houseIcon {
         margin-top: 3rem;
         font-size: 60pt;
+        z-index: 1;
         @media (max-width: 768px ){
             font-size: 48pt;
-
         }
     }
 
@@ -183,9 +201,9 @@ input[type="number"]::-webkit-inner-spin-button {
         font-weight: 500;
         z-index: 1;
     }
-
+    
     .main-content {
-        z-index: 1;
+        z-index: 3;
         display: grid;
         grid-template-areas: 
                             "a b"                     
@@ -200,7 +218,7 @@ input[type="number"]::-webkit-inner-spin-button {
         box-shadow: rgba(17, 152, 129, 0.375) 0px 0px 15px 10px;
         background-color: rgba(3, 3, 3, 0.761);
         border-radius: 10px;
-
+        
         .form-container {
             padding: 7% 12%;
     
@@ -214,6 +232,9 @@ input[type="number"]::-webkit-inner-spin-button {
                     display: block;
                     margin: 0.8rem 0;
                 }
+                span {
+                    font-size: 10pt;
+                }
                 input {
                     display: block;
                     margin: 0.8rem 0;
@@ -226,6 +247,9 @@ input[type="number"]::-webkit-inner-spin-button {
                 label {
                     display: block;
                     margin: 0.8rem 0;
+                }
+                span {
+                    font-size: 10pt;
                 }
                 input {
                     display: block;

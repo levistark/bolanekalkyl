@@ -8,11 +8,12 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #04040e;
   position: relative;
+  width: 100vw !important;
 }
 body .snow-wrapper {
   display: flex;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 body .snow-wrapper .snowFlake {
   font-size: 5pt;
@@ -74,6 +75,38 @@ body .snow-wrapper .randomSnowflake12 {
   animation-delay: 0.9s;
   left: 91vw;
 }
+body .bg-container {
+  position: absolute;
+  width: 100% !important;
+  height: auto;
+  z-index: 1;
+  overflow: hidden;
+  /* Add hover styles to reveal the unblurred part of the image */
+}
+@media (min-width: 1400px) {
+  body .bg-container {
+    max-height: 100vh;
+  }
+}
+@media (max-width: 970px) {
+  body .bg-container {
+    height: 100%;
+  }
+}
+body .bg-container .bg-image {
+  background-size: cover;
+  width: 100%;
+  filter: blur(15px) brightness(50%);
+  transition: filter 0.3s ease-out;
+}
+@media (max-width: 970px) {
+  body .bg-container .bg-image {
+    width: auto;
+  }
+}
+body .bg-container:hover .bg-image {
+  filter: blur(0px) brightness(100%);
+}
 
 input {
   background-color: transparent;
@@ -81,6 +114,10 @@ input {
   border-bottom: 1px solid #a1a1a1;
   color: #d1d1d1;
   outline: none;
+}
+
+.warning {
+  border-bottom: 1px solid #e1ba0e;
 }
 
 input[type=number]::-webkit-inner-spin-button {
@@ -136,29 +173,14 @@ input[type=number] {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: #d1d1d1;
   position: relative;
-  height: 100vh;
+  color: #d1d1d1;
   padding-bottom: 6rem;
-}
-.main .bg-container {
-  position: absolute;
-  /* Add hover styles to reveal the unblurred part of the image */
-}
-.main .bg-container .bg-image {
-  background-size: cover;
-  width: 100vw;
-  max-height: 100vh;
-  filter: blur(15px) brightness(50%);
-  transition: filter 0.3s ease-out;
-  z-index: -2;
-}
-.main .bg-container:hover .bg-image {
-  filter: blur(0px) brightness(100%);
 }
 .main .houseIcon {
   margin-top: 3rem;
   font-size: 60pt;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   .main .houseIcon {
@@ -171,7 +193,7 @@ input[type=number] {
   z-index: 1;
 }
 .main .main-content {
-  z-index: 1;
+  z-index: 3;
   display: grid;
   grid-template-areas: "a b" "c c";
   box-shadow: rgba(17, 152, 129, 0.375) 0px 0px 15px 10px;
@@ -199,6 +221,9 @@ input[type=number] {
   display: block;
   margin: 0.8rem 0;
 }
+.main .main-content .form-container .house-form span {
+  font-size: 10pt;
+}
 .main .main-content .form-container .house-form input {
   display: block;
   margin: 0.8rem 0;
@@ -211,6 +236,9 @@ input[type=number] {
 .main .main-content .form-container .budget-form label {
   display: block;
   margin: 0.8rem 0;
+}
+.main .main-content .form-container .budget-form span {
+  font-size: 10pt;
 }
 .main .main-content .form-container .budget-form input {
   display: block;
