@@ -42,30 +42,42 @@
                 <form class="house-form" method="post">
                     <label for="inp-housePrice">Tänkt bostadspris</label>
                         <span class="text-warning"></span>
-                    <input type="number" id="inp-housePrice" placeholder="Ex. 2000000" required>
+                    <input type="number" id="inp-housePrice" placeholder="Ex. 2000000" >
                     <label for="inp-deposit">Kontantinsats</label>
                         <span class="text-warning"></span>
-                    <input type="number" id="inp-deposit" required>
+                    <input type="number" id="inp-deposit" >
                     <label for="inp-interest">Exempelränta i %</label>
                         <span class="text-warning"></span>
-                    <input type="number" id="inp-interest" placeholder="Ex. 4.5" required>
+                    <input type="number" id="inp-interest" placeholder="Ex. 4.5" >
                     <label for="inp-amortization">Ammorteringsgrad i % per år</label>
                         <span class="text-warning"></span>
-                    <input type="number" id="inp-amortization" placeholder="Ex. 2" required>
+                    <input type="number" id="inp-amortization" placeholder="Ex. 2" >
                 </form>
             </div>
             <div class="form-container">
                 <h2>Hushåll & ekonomi</h2>
                 <form class="budget-form" method="post">
-                    <label for="inp-income">Månadsinkomst innan skatt</label>
+                    <label for="inp-income">Månadsinkomst <em>före </em>skatt</label>
                         <span class="text-warning"></span>
-                    <input type="number" id="inp-income" required>
+                    <input type="number" id="inp-income" >
                     <label for="inp-opCosts">Driftskostnader</label>
                         <span class="text-warning"></span>
-                    <input type="number" id="inp-opCosts" required>
-                    <label for="inp-otherCosts">Övriga kostnader</label>
+                    <input type="number" id="inp-opCosts"  placeholder="El, värme, sophämtning, etc">
+                    <label for="inp-otherCosts">Övriga kostnader & utgifter</label>
                         <span class="text-warning"></span>
-                    <input type="number" id="inp-otherCosts" required>
+                    <input type="number" id="inp-otherCosts"  placeholder="Boende- och levnadskostnader">
+                    <div class="radio-container">
+                        <div class="radio btn-radio">
+                            <input type="checkbox" id="inp-radioHouse">
+                            <label for="inp-radio">Villa/Radhus</label>
+                        </div>
+                        <div class="radio btn-radio">
+                            <input type="checkbox" id="inp-radioApartment">
+                            <label for="inp-radio">Bostadsrätt</label>
+                        </div>
+                        <span class="radio-text text-warning text-center"></span>
+                    </div>
+                    
                 </form>
             </div>
             <div class="result-container">
@@ -82,6 +94,7 @@
                 </ul>
             </div>
         </div>
+        <p><small>Dina uppgifter blir beräknade utifrån snittvärden schablonberäkningar. <br>Vi frånskriver oss allt ansvar vid händelse av felberäkning/missvisande siffor</small></p>
     </main>
 
     <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>

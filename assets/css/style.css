@@ -245,6 +245,18 @@ input[type=number] {
   width: 100%;
   margin: 0.8rem 0;
 }
+.main .main-content .form-container .budget-form .radio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main .main-content .form-container .budget-form .radio-container .btn-radio {
+  flex: 1;
+  text-align: center;
+}
+.main .main-content .form-container .budget-form .radio-container .radio-text {
+  margin: 0 auto;
+}
 .main .main-content .result-container {
   grid-area: c;
   padding: 1rem 3rem 3rem;
@@ -282,4 +294,9 @@ input[type=number] {
   font-size: 15pt;
   color: #1ad1bf;
   font-style: italic;
+}
+.main p {
+  margin-top: 3rem;
+  text-align: center;
+  z-index: 2;
 }
